@@ -41,16 +41,19 @@ for x in range(len(epsilon)) :
 	rewardEpsOptimal=[]
 
 	for y in range(2,armPulls+1) :
-		rewardPull=[] # All rewards in this pull/time-step
-		optimalPull=0 # Number of pulss of best arm in this time step
+		# All rewards in this pull/time-step
+		rewardPull=[] 
+		# Number of pulss of best arm in this time step
+		optimalPull=0 
 		for z in range(banditProblems) :
 
 			if random.random()<epsilon[x] :
 				i=np.random.randint(k)
 			else :
 				i=np.argmax(Q[z])
-
-			if i==trueOptimal[z] : # To calculate % optimal action
+			
+			# To calculate % optimal action
+			if i==trueOptimal[z] : 
 				optimalPull=optimalPull+1
 
 			rewardTemp=np.random.normal(trueMeans[z][i],1)
