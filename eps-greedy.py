@@ -1,3 +1,4 @@
+# Imported relevant python libraries
 import numpy as np
 import matplotlib.pyplot as mpy
 import random
