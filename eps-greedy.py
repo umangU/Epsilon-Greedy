@@ -3,24 +3,24 @@ import numpy as np
 import matplotlib.pyplot as mpy
 import random
 
-# total number of bandit problems
+# Total number of bandit problems
 banditProblems=2000
-# total number of arms in each bandit problem
+# Total number of arms in each bandit problem
 k=4
-# total number of times to pull each arm
+# Total number of times to pull each arm
 armPulls=1000
 
-# true means generated for each arms for all the bandits
+# True means generated for each arms for all the bandits
 trueMeans=np.random.normal(0,1,(banditProblems,k))
-# storing the true optimal arms in each bandit
+# Storing the true optimal arms in each bandit
 trueOptimal=np.argmax(trueMeans,1)
-# each row represents a bandit problem
+# Each row represents a bandit problem
 
-# array of values for epsilon
+# Array of values for epsilon
 epsilon=[0,0.1]
 col=['r','g']
 
-# adding subplots to plot and compare both plots simultaneously
+# Adding subplots to plot and compare both plots simultaneously
 plotFirst=mpy.figure().add_subplot(111)
 plotSecond=mpy.figure().add_subplot(111)
 
