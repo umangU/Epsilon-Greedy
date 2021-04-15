@@ -30,9 +30,9 @@ for x in range(len(epsilon)) :
 
 	# Storing the predicted reward
 	Q=np.zeros((banditProblems,k))
-	# total number of times each arms is pulled
+	# Total number of times each arms is pulled
 	N=np.ones((banditProblems,k))
-	# assigning initial random arm pulls
+	# Assigning initial random arm pulls
 	initialArm=np.random.normal(trueMeans,1)
 
 	rewardEps=[]
@@ -41,8 +41,8 @@ for x in range(len(epsilon)) :
 	rewardEpsOptimal=[]
 
 	for y in range(2,armPulls+1) :
-		rewardPull=[] # all rewards in this pull/time-step
-		optimalPull=0 # number of pulss of best arm in this time step
+		rewardPull=[] # All rewards in this pull/time-step
+		optimalPull=0 # Number of pulss of best arm in this time step
 		for z in range(banditProblems) :
 
 			if random.random()<epsilon[x] :
